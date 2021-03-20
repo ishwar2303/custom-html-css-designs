@@ -1,0 +1,59 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* custom toggle button start */
+
+.custom-toggle-btn {
+    height: 21px;
+    width: 40px;
+    border-radius: 50px;
+    background: rgb(165 165 165 / 20%);
+    position: relative;
+    cursor: pointer;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.custom-toggle-btn input {
+    display: none;
+}
+
+.custom-toggle-btn>span {
+    transition: 300ms;
+    background: #2d3436;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translate(0, -52%);
+}
+
+.custom-toggle-btn input:checked~span {
+    transition: 300ms;
+    -webkit-transition: .4s;
+    background: #2980b9;
+    position: absolute;
+    top: 50%;
+    transform: translate(17px, -52%);
+    width: 17px;
+    height: 17px;
+}
+
+.custom-toggle-btn input:checked~span:hover {
+    box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.custom-toggle-btn:hover span {
+    transition: 300ms;
+    box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* custom toggle button end */

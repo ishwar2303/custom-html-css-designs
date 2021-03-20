@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Popup</title>
+    <link rel="stylesheet" href="assets/css/custom-popup.css">
+    <script>
+        function showCustomPopup() {
+            let elements = document.getElementsByClassName('custom-popup')
+            elements[0].style.display = 'block'
+            elements = document.getElementsByClassName('custom-popup-overlay')
+            elements[0].style.display = 'block'
+        }
+
+        function hideCustomPopup() {
+            let elements = document.getElementsByClassName('custom-popup')
+            elements[0].style.display = 'none'
+            elements = document.getElementsByClassName('custom-popup-overlay')
+            elements[0].style.display = 'none'
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <button class="custom-btn" onclick="showCustomPopup()">Show Popup</button>
+        </div>
+        <div class="custom-popup">
+            <div class="custom-popup-content">
+                <h3>Popup Heading</h3>
+                <p>Popup Content</p>
+            </div>
+        </div>
+        <div class="custom-popup-overlay" onclick="hideCustomPopup()">
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+</html>
+
+</html>
+
+</html>

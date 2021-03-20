@@ -1,0 +1,17 @@
+.wrapper {
+    padding: 25px;
+}
+
+.progress-bar-container {
+    width: 500px;
+}
+
+#progress-bar {
+    background: rgb(90, 129, 52);
+    height: 25px;
+    width: 0%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}

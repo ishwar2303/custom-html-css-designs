@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <script>
+        let percentage = 0;
+        let interval
+
+        function progressBar() {
+            let pgBar = document.getElementById('progress-bar')
+            percentage++;
+            pgBar.style.width = percentage + '%'
+            pgBar.innerHTML = percentage + '%'
+            if (percentage == 100) {
+                clearInterval(interval)
+            }
+        }
+
+        setTimeout(() => {
+            interval = setInterval(progressBar, 50);
+        }, 5000)
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="progress-bar-container border">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+</body>
+
+</html>

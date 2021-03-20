@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        #timer {
+            padding: 10px 25px;
+            color: red;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+    </style>
+
+    <script>
+        let time = 180 // 1 hour
+
+        let interval = setInterval(timer, 1000)
+
+        function num_of_digits(num) {
+            if (num == 0)
+                return 1;
+            count = 0
+            while (num != 0)
+                num = num / 10
+            return count
+        }
+
+        function timer() {
+            let timerblock = document.getElementById('timer')
+                // seconds, minutes, hours
+            let hours = parseInt(time / 3600)
+
+            let timeLeft = time - hours * 3600
+
+            let minutes = parseInt(timeLeft / 60)
+
+            timeLeft = timeLeft - minutes * 60
+
+            let seconds = timeLeft
+
+            hours = hours.toString()
+            minutes = minutes.toString()
+            seconds = seconds.toString()
+
+            if (hours.length == 1)
+                hours = '0' + hours
+            if (minutes.length == 1)
+                minutes = '0' + minutes
+            if (seconds.length == 1)
+                seconds = '0' + seconds
+
+            timerblock.innerHTML = hours + ':' + minutes + ':' + seconds
+
+            timerblock.style.display = 'block'
+            if (time <= 59) {
+                timerblock.style.color = 'red'
+                setTimeout(() => {
+                    timerblock.style.display = 'none'
+                }, 500)
+            }
+
+            if (time <= 0) {
+                clearInterval(interval)
+                alert('end')
+            }
+            time--;
+
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div id="timer" class="border">Timer</div>
+    </div>
+</body>
+
+</html>
