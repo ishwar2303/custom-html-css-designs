@@ -2,20 +2,37 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    padding: 25px;
+    font-family: monospace;
+}
+
+.child {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    padding: 25px;
 }
 
 
 /* custom toggle button start */
 
 .custom-toggle-btn {
-    height: 21px;
-    width: 40px;
+    height: 26px;
+    width: 50px;
     border-radius: 50px;
-    background: rgb(165 165 165 / 20%);
+    background: #3e3e3e;
     position: relative;
     cursor: pointer;
-    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(90, 90, 90, 0.3);
 }
 
 .custom-toggle-btn input {
@@ -24,36 +41,149 @@
 
 .custom-toggle-btn>span {
     transition: 300ms;
-    background: #2d3436;
-    height: 17px;
-    width: 17px;
+    background: white;
+    height: 21px;
+    width: 21px;
     border-radius: 50%;
-    display: block;
     position: absolute;
     top: 50%;
-    left: 3px;
-    transform: translate(0, -52%);
+    left: 2px;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-toggle-btn>span>i {
+    font-size: 8px;
+    color: white;
 }
 
 .custom-toggle-btn input:checked~span {
     transition: 300ms;
     -webkit-transition: .4s;
-    background: #2980b9;
+    background: #30af10;
     position: absolute;
     top: 50%;
-    transform: translate(17px, -52%);
-    width: 17px;
-    height: 17px;
+    transform: translate(25px, -50%) rotate(360deg);
+    height: 21px;
+    width: 21px;
+    transition: 300ms;
 }
 
 .custom-toggle-btn input:checked~span:hover {
-    box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: 300ms;
+    box-shadow: 0px 0px 0px 8px rgba(95, 95, 95, 0.5);
 }
 
 .custom-toggle-btn:hover span {
     transition: 300ms;
-    box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 0px 8px rgba(99, 99, 99, 0.5);
 }
 
 
 /* custom toggle button end */
+
+
+/* custom checkbox button start */
+
+.custom-toggle-checkbox-btn {
+    width: 17px;
+    height: 17px;
+}
+
+.custom-toggle-checkbox-btn>input {
+    display: none;
+}
+
+.custom-toggle-checkbox-btn>span {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 0.5px solid rgba(90, 90, 90, 0.3);
+    border-radius: 3px;
+}
+
+.custom-toggle-checkbox-btn>span:hover {
+    cursor: pointer;
+    border-color: #30af10;
+    box-shadow: 0px 0px 0px 4px #beffae;
+}
+
+.custom-toggle-checkbox-btn>span>i {
+    font-size: 9px;
+}
+
+.custom-toggle-checkbox-btn>input:checked~span {
+    color: white;
+    background: #30af10;
+}
+
+
+/* */
+
+
+/* select-option-button*/
+
+.w-150px {
+    width: 150px;
+}
+
+.w-300px {
+    width: 300px;
+}
+
+.select-option-container {
+    display: flex;
+    font-family: -webkit-pictograph;
+}
+
+.select-option-container>label {
+    cursor: pointer;
+    border-collapse: collapse;
+    display: flex;
+    flex: 1;
+}
+
+.select-option-container>label:last-child>span {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    border-right: 4px solid rgba(32, 32, 32);
+}
+
+.select-option-container>label:first-child>span {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    border-left: 4px solid rgba(32, 32, 32);
+}
+
+.select-option-container>label>input {
+    display: none;
+}
+
+.select-option-container>label>input:checked~span {
+    background: rgba(32, 32, 32);
+    color: white;
+}
+
+.select-option-container>label>span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 7px 15px;
+    background: white;
+    border-radius: inherit;
+    border: 4px solid rgba(32, 32, 32);
+    border-right: none;
+    border-left: 4px solid rgba(32, 32, 32);
+}
+
+.select-option-container>label>:hover {}
+
+.select-option-container>label>span:hover {
+    background: rgba(32, 32, 32, 0.1);
+}

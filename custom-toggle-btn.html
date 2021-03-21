@@ -7,16 +7,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custome Toggle Button</title>
     <link rel="stylesheet" href="assets/css/custom-toggle-btn.css">
+    <script src="https://kit.fontawesome.com/f9bbf9ac4e.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
-        <label class="custom-toggle-btn">
-            <input type="checkbox" name="gender" value="female" required="">
-            <span>
-            </span>
-        </label>
+        <div class="child">
+            <div class="card">
+                <h3>Toggle Button Unchecked</h3>
+                <label class="custom-toggle-btn">
+                    <input type="checkbox" name="gender" >
+                    <span>
+                        <i class="fas fa-check"></i>
+                    </span>
+                </label>
+            </div>
+            <div class="card">
+                <h3>Toggle Button Checked</h3>
+                <label class="custom-toggle-btn">
+                    <input type="checkbox" name="gender" checked>
+                    <span>
+                        <i class="fas fa-check"></i>
+                    </span>
+                </label>
+            </div>
+        </div>
+
+        <div class="child">
+            <div class="card">
+                <h3>Custom checkbox Unchecked</h3>
+                <label class="custom-toggle-checkbox-btn">
+                    <input type="checkbox" >
+                    <span>
+                        <i class="fas fa-check"></i>
+                    </span>
+                </label>
+            </div>
+            <div class="card">
+                <h3>Custom checkbox Checked</h3>
+                <label class="custom-toggle-checkbox-btn">
+                    <input type="checkbox" checked>
+                    <span>
+                        <i class="fas fa-check"></i>
+                    </span>
+                </label>
+            </div>
+        </div>
+
+        <div class="child">
+            <div class="card">
+                <h3>Select radio option</h3>
+                <div class="select-option-container w-150px">
+                    <label class="">
+                        <input type="radio" name="option-name" checked>
+                        <span>
+                            No
+                        </span>
+                    </label>
+                    <label class="">
+                        <input type="radio" name="option-name" >
+                        <span>
+                            Yes
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Select radio option</h3>
+                <div class="select-option-container w-300px">
+                    <label class="">
+                        <input type="radio" name="gender" >
+                        <span>
+                            Male
+                        </span>
+                    </label>
+                    <label class="">
+                        <input type="radio" name="gender" >
+                        <span>
+                            Female
+                        </span>
+                    </label>
+                    <label class="">
+                        <input type="radio" name="gender" >
+                        <span>
+                            Others
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
     </div>
+
 
 
 
